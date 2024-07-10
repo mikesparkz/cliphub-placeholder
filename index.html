@@ -1,0 +1,217 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<title>ClipHUB</title>
+	</head>
+	<body>
+<div id ="popup-disabler" class="popup-disabler" onclick="hideNotifications()"></div>
+	<div class="top-bar">
+		<div class="logo">
+		<img src="Icons/ClipHub_Logo.svg">
+		</div>
+		<form class="search-section" action="#" method="POST">
+			<div class="search-box">
+				<div class="search-text">
+					<input type="text" name="clipname" placeholder="Search..." />
+				</div>
+				<div class="search-button">
+					<input type="image" src="Icons/search-outline.svg" width=44px title="Cerca clip">
+				</div>
+			</div>
+		</form>
+		<div class="user-section">
+			<div class="user-buttons">
+				
+				<!-- scompare se sei loggato -->
+				<a href="#">
+  					<img src="Icons/login.svg" title="Accedi" width=50px>
+				</a>
+				<a href="#">
+  					<img src="Icons/random-1-dice.svg" title="Mostra clip random"width=60px>
+				</a>
+				<!-- compare se sei loggato -->
+				<a href="#">
+  					<img class="profile-pic" src="Icons/pfp.jpg" title="nome_utente"width=52px>
+				</a>
+				<div>
+				<button onClick="showNotifications()" class="notification-bell" href="#">
+					<b class="notification-number">3</b>
+  					<img src="Icons/bell_icon.svg" title="nome_utente"width=65px>
+				</button>
+					<div id ="notification-popup" class="notification-popup">
+					<b>Notifiche</b>
+					<a href="#">
+					<div class="notification-list">
+						<img class="profile-pic" src="Icons/exspasion12.jpg"  width=25px height=25px>
+						<p> <b>Exspasion12</b> ha pubblicato una nuova clip di <b><i>Dead by Daylight</i></b>.</p>
+						<p class="notification-time">10s</p> 
+					</div>
+					</a>
+					<a href="#">
+					<div class="notification-list">
+						<img class="profile-pic" src="Icons/Supercalifrag22.jpg"  width=25px height=25px>
+						<p> <b>Supercalifrag22</b> ha pubblicato una nuova clip di <b><i>VALORANT</i></b>.</p>
+						<p class="notification-time">1m</p> 
+					</div>
+					</a>
+					<a href="#">
+					<div class="notification-list">
+						<img class="profile-pic" src="Icons/Supercalifrag22.jpg"  width=25px height=25px>
+						<p><b>Supercalifrag22</b> ha iniziato a seguirti.</p>
+						<p class="notification-time">15m</p> 
+					</div>
+					</a>
+					<a href="#">
+					<div class="notification-list">
+						<img class="profile-pic" src="Icons/exspasion12.jpg"  width=25px height=25px>
+						<p> <b>Exspasion12</b> ha commentato una tua clip <b><i>Ecco a lei un risate con misto dolore Scary Movie</i></b> di <b><i>Dead by Daylight</i></b>.</p>
+						<p class="notification-time">1h</p> 
+					</div>
+					</a>
+					<a href="#">
+					<div class="notification-list">
+						<img class="profile-pic" src="Icons/exspasion12.jpg"  width=25px height=25px>
+						<p><b>Exspasion12</b> ha iniziato a seguirti.</p>
+						<p class="notification-time">3h</p> 
+					</div>
+					</a>
+					<a class="notification-history" style="font-size:16px; color:#0000EE;" href="#">Cronologia notifiche...</a>
+				</div>
+				</div>
+
+			</div>
+		</div>
+	</div> <!-- fine top bar -->
+
+	<div class="main-body">
+
+		<div class="side-body">
+			<div style="margin-top:15px"></div>
+				<a href="#">
+  					<div class="side-container-button" title="Visualizza le clip popolari">
+  						<img src="Icons/fire.svg"  width=30px>
+  						<b>Clip popolari</b>
+  					</div>
+  				</a>
+  				<a href="#">
+  					<div class="side-container-button" title="Visualizza le varie categorie delle clip">
+  						<img src="Icons/video-library.svg"  width=30px>
+  						<b>Categorie</b>
+  					</div>
+  				</a>
+  				<a href="#">
+  					<div class="side-container-button" title="Visualizza i vari profili">
+  						<img src="Icons/users-alt.svg"  width=30px>
+  						<b>Profili</b>
+  					</div>
+  				</a>
+
+  				<!-- Mostra se sei loggato -->
+  				<a href="#">
+  					<div class="side-container-button" title="Visualizza le clip da noi suggerite">
+  						<img src="Icons/suggested_clips.svg"  width=30px>
+  						<b>Clip suggerite</b>
+  					</div>
+  				</a>
+  				<a href="#">
+  					<div class="side-container-button" title="Visualizza le clip degli utenti che segui">
+  						<img src="Icons/follower_clips.svg"  width=30px>
+  						<b>Clip dei seguiti</b>
+  					</div>
+  				</a>
+
+				<hr class="separator"><!-- Aggiungi una linea di separazione -->
+				<!-- Mostra se non sei loggato -->
+				<!-- <h1>Accedi</h1>
+				<p><i>Accedi per visualizzare gli account da te seguiti e sintonizzarti con i loro contenuti.</i></p> -->	
+
+
+
+				<!-- Mostra se sei loggato -->
+				<h1>Profili seguiti</h1>
+				<a href="#">
+  					<div class="side-container-user-btn" title="Exspasion12">
+  						<img class="profile-pic" src="Icons/exspasion12.jpg"  width=40px height=40px>
+  						<b><i>Exspasion12</i></b>
+  					</div>
+  				</a>
+  				<a href="#">
+  					<div class="side-container-user-btn" title="Mike Spark">
+  						<img class="profile-pic" src="Icons/pfp.jpg"  width=40px height=40px>
+  						<b><i>Mike Spark</i></b>
+  					</div>
+  				</a>
+  				<a href="#">
+  					<div class="side-container-user-btn" title="Supercalifrag22">
+  						<img class="profile-pic" src="Icons/Supercalifrag22.jpg"  width=40px height=40px>
+  						<b><i>Supercalifrag22</i></b>
+  					</div>
+  				</a>
+		</div>
+
+
+
+		<div class="video-list-body">
+			<h1>Video che ti potrebbero interessare</h1>
+			<div class="video-list-container">
+				<div class="video-box" title="Mike Spark - League of Legends">
+					<a href="index.html">
+					<img src="https://i.ytimg.com/vi/z3JHdPEHBH4/maxresdefault.jpg" width=320px>
+					<h3>[ITA] BEST ELO CLIMBER - RAMMUS JUNGLE -  League Of Legends</h3>
+					<p><i>Mike Spark</i></p>
+					<p><i>Clip di League of Legends</i></p>
+					<div class="video-score">
+						<div class="likes"><img src="Icons/thumbs-up.svg" width=16px>
+						2
+						</div>
+						<div class="dislikes"><img src="Icons/thumbs-down.svg" width=16px>
+						1
+						</div>
+					</div>
+					</a>
+				</div>
+
+				<div class="video-box" title="Exspasion12 - Dead by Daylight">
+					<a href="index.html">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToqjQZ2G9CGnaZT30bAclsKzMsmqEbGe4qyw&usqp=CAU" width=320px>
+					<h3>Ecco a lei un risate con misto dolore Scary Movie</h3>
+					<p><i>Exspasion12</i></p>
+					<p><i>Clip di Dead by Daylight</i></p>
+					<div class="video-score">
+						<div class="likes"><img src="Icons/thumbs-up.svg" width=16px>
+						33
+						</div>
+						<div class="dislikes"><img src="Icons/thumbs-down.svg" width=16px>
+						0
+						</div>
+					</div>
+					</a>
+				</div>
+
+
+				<div class="video-box" title="Mike Spark - VALORANT">
+					<a href="index.html">
+					<img src="https://upload.wikimedia.org/wikipedia/uk/0/02/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%B2%D1%96%D0%B4%D0%B5%D0%BE%D0%B3%D1%80%D0%B8_Valorant.jpg" width=320px>
+					<h3>Alle balla la tip-tap sotto adderall</h3>
+					<p><i>Mike Spark</i></p>
+					<p><i>Clip di VALORANT</i></p>
+					<div class="video-score">
+						<div class="likes"><img src="Icons/thumbs-up.svg" width=16px>
+						5
+						</div>
+						<div class="dislikes"><img src="Icons/thumbs-down.svg" width=16px>
+						0
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+
+	<script src="index.js"></script>
+
+	
+	</body>
+</html>
